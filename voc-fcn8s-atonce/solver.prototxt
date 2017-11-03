@@ -1,0 +1,40 @@
+#Set net files
+train_net: "train.prototxt"
+test_net: "val.prototxt"
+
+# Test on X batches each time we test. #1111 #not used
+test_iter: 736
+
+# make test net, but don't invoke it from the solver itself
+test_interval: 999999999
+
+# Display the current training loss and accuracy every X iterations.
+display: 20
+
+# Display the loss averaged over the last average_loss iterations
+average_loss: 20
+
+# Set `lr_policy` to define how the learning rate changes during training
+lr_policy: "fixed"
+
+# lr for unnormalized softmax
+base_lr: 1e-12
+
+# Set momentum to accelerate learning by taking weighted average of current and previous updates
+# high momentum #0.99
+momentum: 0.99
+
+# no gradient accumulation (accumulates gradient when updating -- can get same results as with higher batch size)
+iter_size: 1
+
+# no. of times to update the net (training iterations) -Train on X batches-
+max_iter: 300000
+
+# Set weight decay to regularize and prevent overfitting
+weight_decay: 0.0005
+
+# Snapshots are files used to store networks we've trained.
+# We'll snapshot every X iterations
+snapshot: 4000
+snapshot_prefix: "../../../data/fcn_training/snapshot/train"
+test_initialization: false

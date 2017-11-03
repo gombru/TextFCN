@@ -1,0 +1,12 @@
+
+*.caffemodel
+*.solverstate
+*~
+data/
+fcn/voc-fcn16s/snapshot/
+fcn/voc-fcn16s/results/
+fcn/voc-fcn16s/heatmaps/
+fcn/voc-fcn16s/heatmaps-images/
+evaluation/regions_json/
+TextProposals/data/
+/README.md
