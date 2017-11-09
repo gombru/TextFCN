@@ -13,11 +13,11 @@ This FCN was used to improve the [TextProposals](https://github.com/lluisgomez/T
 
 [FAST: Facilitated and Accurate Scene Text Proposals through FCN Guided Pruning](http://www.sciencedirect.com/science/article/pii/S0167865517302982)  
 Dena Bazazian, Raul Gomez, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas, Andrew D.Bagdanov.   
-Pattern Recognition Letters. 2017.
+Pattern Recognition Letters, 2017.
 
 [Improving Text Proposals for Scene Images with Fully Convolutional Networks](https://arxiv.org/abs/1702.05089)  
 Dena Bazazian, Raul Gomez, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas and Andrew Bagdanov.  
- DLPR2016. 2016.
+ICPR workshop (DLPR), 2016.
 
 ## Requirements
 The amount of required GPU memory depends on the image size:  
