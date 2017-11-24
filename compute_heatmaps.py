@@ -17,7 +17,7 @@ caffe.set_mode_gpu()
 val = np.loadtxt('../../data/coco-text/val-withoutIllegible.txt', dtype=str)
 
 # load net
-net = caffe.Net('voc-fcn8s-atonce/deploy.prototxt', '../../data/fcn_training/coco-104000/train_iter_104000.caffemodel', caffe.TEST)
+net = caffe.Net('voc-fcn8s-atonce/deploy.prototxt', '../../data/fcn_models/fcn8s-atonce.caffemodel.caffemodel', caffe.TEST)
 
 
 print 'Computing heatmaps ...'
