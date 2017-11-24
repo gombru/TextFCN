@@ -17,7 +17,7 @@ caffe.set_mode_gpu()
 val = np.loadtxt('../../data/coco-text/val-withoutIllegible.txt', dtype=str)
 
 # load net
-net = caffe.Net('voc-fcn8s-atonce/deploy.prototxt', '../../data/fcn_models/fcn8s-atonce.caffemodel.caffemodel', caffe.TEST)
+net = caffe.Net('voc-fcn8s-atonce/deploy.prototxt', 'voc-fcn8s-atonce/fcn8s-atonce.caffemodel', caffe.TEST)
 
 
 print 'Computing heatmaps ...'
@@ -62,12 +62,12 @@ for idx in val:
 
     #Save CSV heatmap
     # pixels = np.asarray(hmap_softmax)
-    # np.savetxt('/home/imatge/caffe-master/data/coco-text/csv_heatmaps/voc-fcn8s-atonce-104000it/' + idx + '.csv', pixels, delimiter=",")
+    # np.savetxt('../../data/coco-text/heatmaps-withoutIllegible-csv/voc-fcn8s-atonce-104000it/' + idx + '.csv', pixels, delimiter=",")
 
     #Save PNG softmax heatmap
     hmap_softmax_2save = (255.0 * hmap_softmax).astype(np.uint8)
     hmap_softmax_2save = Image.fromarray(hmap_softmax_2save)
-    hmap_softmax_2save.save('/home/imatge/caffe-master/data/coco-text/heatmaps-withoutIllegible/' + idx + '.png')
+    hmap_softmax_2save.save('../../data/coco-text/heatmaps-withoutIllegible/' + idx + '.png')
 
 
     # Save color softmax heatmap
@@ -77,7 +77,7 @@ for idx in val:
     # ax.set_axis_off()
     # fig.add_axes(ax)
     # ax.imshow(hmap_softmax, aspect='auto', cmap="jet")
-    # fig.savefig('/home/imatge/caffe-master/data/coco-text/heatmaps/' + idx + '-ht.jpg')
+    # fig.savefig('../../data/coco-text/heatmaps-withoutIllegible-color/' + idx + '-ht.jpg')
     # plt.close(fig)
 
 
